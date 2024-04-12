@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .main-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background-image: url('./img/_ed9597e2-7429-42e7-8391-dc09d4e5a403.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation a {
+            margin: 4rem;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: 200;
+        }
+        .top-nav a{
+            position: relative;
+            animation: Top-nav 1s ease-out;
+        }
+        .bottom-nav a{
+            position: relative;
+            animation: Bottom-nav 1s ease-out;
+        }
+
+        .navigation a:hover{
+            opacity: 0.7;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 5rem;
+
+            animation: main-heading-appear 5s ease-out;
+        }
+        @keyframes Top-nav {
+            from{
+                top: -4rem;
+            }
+            to{
+                top:0;
+            }
+        }
+
+        @keyframes Bottom-nav {
+            from{
+                bottom: -4rem;
+            }
+            to{
+                bottom:0;
+            }
+        }
+
+        @keyframes main-heading-appear {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+            h1{
+                font-size: 4rem;
+            }
+            .navigation a {
+                /* font-size: 1rem; */
+                margin:2.5rem ;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-section">
+        <nav class="top-nav navigation">
+            <a href="">Information</a>
+            <a href="">Reservation</a>
+        </nav>
+        <h1>PYSPACE</h1>
+        <nav class="bottom-nav navigation">
+            <a href="">Gift cards</a>
+            <a href="">Contact</a>
+        </nav>
+    </div>
+</body>
+
+</html>
